@@ -1,0 +1,26 @@
+* {
+  font-family: sans-serif;
+  font: open;
+  margin: 0
+}
+
+.nav {
+  display: block;
+  padding: 20px 10px 0px 10px;
+  height: 100%;
+  width: 200px;
+  background-color: #1F1F3D;
+  color: #E9E9F3;
+  position: fixed;
+  overflow: auto;
+  border: 1px solid red;
+}
+
+.header-filter {
+  color: #BFBFDD;
+}
+
+main {
+  display: block;
+  margin-left: 250px;
+}
