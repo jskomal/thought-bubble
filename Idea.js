@@ -1,23 +1,17 @@
 class Idea {
-    //id, title, body, star
-    constructor(title, body) {
-        this.id = Date.now();
-        this.title = title;
-        this.body = body;
-        this.isStarred = false;
-    }
+  //id, title, body, star
+  constructor(title, body) {
+    this.id = Date.now();
+    this.title = title;
+    this.body = body;
+    this.isStarred = false;
+  }
 
-    // local storage?
-    saveToStorage() {
+  // local storage???
+  saveToStorage() {}
+  
+  deleteFromStorage() {}
 
-    }
-
-    deleteFromStorage() {
-
-    }
-
-    // update idea's starred state
-    updateIdea() {
-
-    }
+  // update idea's starred state
+  updateIdea() {}
 }
