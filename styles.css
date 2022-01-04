@@ -121,9 +121,10 @@
     border: 1px solid #353567
 }
 .grid-view {
-  background-color: #eaeaf4
+  background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .card {
 margin: 10px;
@@ -147,7 +148,7 @@ justify-content: space-between;
 }
 .card-text {
 width: 216px;
-height: 200px;
+height: 190px;
 border: 2px solid #1f1f3d;
 border-bottom: transparent;
 padding: 10px;
@@ -170,17 +171,14 @@ background-color: #ffffff
 
 }
 #button-comment {
-color: #5356A4
+color: #ffffff;
+font-size: 15px;
 display: flex;
 width: 240px;
 height: 35px;
-align-items: flex-start;
+align-items: center;
 border: none;
 background-color: #5356A4;
-/* justify-content: center; */
-
-
-
 
 }
 .card-bottom-comment {
