@@ -4,7 +4,7 @@
 }
 
 .nav {
-    display: flex;   
+    display: flex;
     flex-direction: column;
     height: 100%;
     width: 300px;
@@ -28,7 +28,7 @@
     padding-left: 10px;
     border-left:transparent;
     border-right: transparent;
-    
+
 }
 
 .header-filter {
@@ -69,7 +69,7 @@
     margin-left: -321px;
     padding-bottom: 3px;
     font-size: 0.85rem;
-    
+
 }
 .form-title {
     padding-top: 30px;
@@ -80,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-#input-title, #input-search{ 
+#input-title, #input-search{
     height: 35px;
 }
 
@@ -101,7 +101,7 @@
     color:#E9E9F3;
     font-size: 1.15rem;
     font-weight: 500;
-    
+
 }
 
 #button-search {
@@ -119,4 +119,73 @@
 #input-title, #input-body, #input-search, .button-save {
     border-radius: 2px;
     border: 1px solid #353567
+}
+.grid-view {
+  background-color: #eaeaf4
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+margin: 10px;
+/* display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-end;
+align-content: stretch; */
+
+
+}
+.card-top-bar {
+background-color: #1f1f3d;
+display: flex;
+width: 240px;
+height: 35px;
+justify-content: space-between;
+
+
+}
+.card-text {
+width: 216px;
+height: 200px;
+border: 2px solid #1f1f3d;
+border-bottom: transparent;
+padding: 10px;
+font-size: 22.5px;
+font-weight: 300;
+}
+.card-title {
+
+}
+.card-body {
+background-color: #ffffff
+
+}
+.card-bottom-bar {
+  border: 2px solid #1f1f3d;
+  width: 236px;
+  height: 35px;
+  display: flex;
+  background-color: #5356A4;
+
+}
+#button-comment {
+color: #5356A4
+display: flex;
+width: 240px;
+height: 35px;
+align-items: flex-start;
+border: none;
+background-color: #5356A4;
+/* justify-content: center; */
+
+
+
+
+}
+.card-bottom-comment {
+
+}
+#button-image-comment {
+
 }
