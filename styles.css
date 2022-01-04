@@ -8,7 +8,7 @@
     flex-direction: column;
     height: 100%;
     width: 300px;
-    background-color: #1F1F3D;
+    background-color: #1F1E3D;
     color: #E9E9F3;
     position: fixed;
 }
@@ -43,7 +43,7 @@
     background-color: #5356A4;
     font-size: 1.35rem;
     font-weight: bolder;
-    color:#d6d6e6;
+    color:#d3d3e9;
     border:1px #353567;
     padding-left: 25px;
     padding-right: 25px;
@@ -54,15 +54,69 @@
 .main-view {
   display: flex;
   flex-direction: column;
-  margin-left:330px;
+  margin-left:300px;
 }
 
 .form-view {
+    background-color: #a9aad2;
     display:flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 5%;
 }
 
 .form-title, .form-body {
-    margin-left: -110px;
+    margin-left: -321px;
+    padding-bottom: 3px;
+    font-size: 0.85rem;
+    
+}
+.form-title {
+    padding-top: 30px;
+}
+
+#input-title, #input-body {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+#input-title, #input-search{ 
+    height: 35px;
+}
+
+#input-body {
+    height: 80px;
+}
+
+#input-search {
+    width: 310px;
+    color:#1F1E3D;
+    height: 40px;
+    padding-left: 8px;
+}
+.button-save {
+    width: 360px;
+    height: 45px;
+    background-color: #1F1E3D;
+    color:#E9E9F3;
+    font-size: 1.15rem;
+    font-weight: 500;
+    
+}
+
+#button-search {
+    width: 25px;
+    height: 44px;
+    background-color: #1F1E3D;
+    padding: 0px 9px 0px 9px;
+}
+.search {
+    display: flex;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+#input-title, #input-body, #input-search, .button-save {
+    border-radius: 2px;
+    border: 1px solid #353567
 }
