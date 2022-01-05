@@ -131,6 +131,10 @@
   border: 1px solid #353567;
 }
 
+#input-body {
+  vertical-align: top;
+}
+
 #input-search {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
