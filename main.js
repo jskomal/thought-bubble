@@ -24,4 +24,12 @@ buttonSave.addEventListener('click', function clickSave(e) {
   }
 });
 
+buttonSave.addEventListener('mouseover', validateInputs);
+buttonSave.addEventListener('mouseout', validateInputs);
+
 //functions
+function validateInputs() {
+  if (inputTitle.value === '' || inputBody.value === '') {
+    buttonSave.classList.toggle('button-save-invalid');
+  }
+}

@@ -102,6 +102,12 @@
   color: #e9e9f3;
   font-size: 1.15rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.button-save-invalid {
+ background-color: #6a66c6;
+ cursor:not-allowed;
 }
 
 #button-search {
