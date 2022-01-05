@@ -114,6 +114,8 @@
   width: 25px;
   height: 44px;
   background-color: #1f1e3d;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
   padding: 0px 9px 0px 9px;
 }
 .search {
@@ -128,6 +130,12 @@
   border-radius: 3px;
   border: 1px solid #353567;
 }
+
+#input-search {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
 .card-view {
   background-color: #ffffff;
   display: flex;
