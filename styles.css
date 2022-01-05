@@ -8,6 +8,11 @@ body {
 
 }
 
+.hidden {
+  /* display: none; */
+  visibility: hidden;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -71,7 +76,7 @@ body {
 
 .form-title,
 .form-body {
-  margin-left: -321px;
+  margin-left: -317px;
   padding-bottom: 3px;
   font-size: 0.85rem;
 }
@@ -82,7 +87,6 @@ body {
 #input-title,
 #input-body {
   width: 350px;
-  margin-bottom: 20px;
 }
 
 #input-title,
@@ -91,13 +95,13 @@ body {
 }
 
 #input-search {
-  width: 310px;
+  width: 350px;
   color: #1f1e3d;
   height: 40px;
   padding-left: 8px;
 }
 .button-save {
-  width: 360px;
+  width: 350px;
   height: 45px;
   background-color: #1f1e3d;
   color: #e9e9f3;
@@ -112,8 +116,8 @@ body {
 }
 
 #button-search {
-  width: 25px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background-color: #1f1e3d;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -122,6 +126,7 @@ body {
 .search {
   display: flex;
   font-weight: 300;
+  width: 350px;
   margin-top: 20px;
 }
 #input-title,
@@ -148,21 +153,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border: 1px solid red;
 }
 .card {
   margin: 10px;
+  width: 33.3%;
   /* display: none; */
 }
 .card-top-bar {
   background-color: #1f1f3d;
   display: flex;
-  width: 240px;
   height: 35px;
   justify-content: space-between;
 }
 .card-text {
-  width: 216px;
-  height: 190px;
+  height: 250px;
   border: 2px solid #1f1f3d;
   border-bottom: transparent;
   padding: 10px;
@@ -175,7 +180,6 @@ body {
 }
 .card-bottom-bar {
   border: 2px solid #1f1f3d;
-  width: 236px;
   height: 35px;
   display: flex;
   background-color: #5356a4;
@@ -184,10 +188,12 @@ body {
   color: #ffffff;
   font-size: 15px;
   display: flex;
-  width: 240px;
-  height: 35px;
   align-items: center;
   border: none;
   background-color: #5356a4;
+}
+
+.error-message {
+  color: red;
 }
 
