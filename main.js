@@ -8,6 +8,8 @@ var buttonSave = document.querySelector('.button-save');
 var ideas = [];
 
 //eventListeners
+
+//separate the function, don't use alert, add a p tag to the dom?
 buttonSave.addEventListener('click', function clickSave(e) {
   e.preventDefault();
   if (inputTitle.value === '' && inputBody.value === '') {
