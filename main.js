@@ -19,6 +19,8 @@ buttonSave.addEventListener('click', function clickSave(e) {
   } else {
     var inputIdea = new Idea(inputTitle.value, inputBody.value);
     ideas.push(inputIdea);
+    inputTitle.value = '';
+    inputBody.value= '';
   }
 });
 
