@@ -9,7 +9,6 @@ body {
 }
 
 .hidden {
-  /* display: none; */
   visibility: hidden;
 }
 
@@ -148,17 +147,15 @@ body {
   border-bottom-left-radius: 0px;
 }
 
+/* Start of Card View */
 .card-view {
   background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  border: 1px solid red;
 }
 .card {
   margin: 10px;
-  width: 33.3%;
-  /* display: none; */
+  width: 30.7%;
 }
 .card-top-bar {
   background-color: #1f1f3d;
@@ -170,14 +167,21 @@ body {
   height: 250px;
   border: 2px solid #1f1f3d;
   border-bottom: transparent;
-  padding: 10px;
+  padding: 5px;
   font-size: 22.5px;
   font-weight: 300;
 }
 
+.card-title {
+  margin: 0;
+}
+
 .card-body {
   background-color: #ffffff;
+  height: 185px;
+  overflow: scroll;
 }
+
 .card-bottom-bar {
   border: 2px solid #1f1f3d;
   height: 35px;

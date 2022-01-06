@@ -7,11 +7,6 @@ class Idea {
     this.isStarred = false;
   }
 
-  // local storage???
-  saveToStorage() {}
-  
-  deleteFromStorage() {}
-
   // update idea's starred state
   updateIdea() {}
 }
