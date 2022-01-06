@@ -107,28 +107,30 @@ function updateCardView() {
 }
 
 function filterStarred(e) {
-  e.preventDefault()
+  e.preventDefault();
   if (buttonShowStarred.innerText === 'Show All Ideas') {
     console.log('hi');
     updateCardView();
     buttonShowStarred.innerText = 'Show Starred Ideas';
   } else {
-      var starredIdeas = ideas.map(function checkForStarred(element) {
+    var starredIdeas = ideas.map(function checkForStarred(element) {
       if (element.isStarred) {
-      return element
-    }
-  })
-      for (var i = 0; i < starredIdeas.length; i++) {
+        return element;
+      }
+    });
+    for (var i = 0; i < starredIdeas.length; i++) {
       if (starredIdeas[i] === undefined) {
         starredIdeas.splice(i, 1);
       }
     }
-      var emptyHTML = '';
-      for (var i = 0; i < starredIdeas.length; i++) {
-        emptyHTML += `<article class='card' id=${starredIdeas[i].id}>
+    var emptyHTML = '';
+    for (var i = 0; i < starredIdeas.length; i++) {
+      emptyHTML += `<article class='card' id=${starredIdeas[i].id}>
         <div class='card-top-bar' id=${starredIdeas[i].isStarred}>
           <input type='image' src= ${
-            starredIdeas[i].isStarred ? 'assets/star-active.svg' : 'assets/star.svg'
+            starredIdeas[i].isStarred
+              ? 'assets/star-active.svg'
+              : 'assets/star.svg'
           } id='button-star' />
           <input type='image' src='assets/delete.svg' id='button-delete'/>
         </div>
@@ -142,8 +144,8 @@ function filterStarred(e) {
         </div>
       </article>`;
     }
-        cardFlex.innerHTML = emptyHTML;
+    cardFlex.innerHTML = emptyHTML;
 
-        buttonShowStarred.innerText = 'Show All Ideas';
-    }
+    buttonShowStarred.innerText = 'Show All Ideas';
   }
+}
