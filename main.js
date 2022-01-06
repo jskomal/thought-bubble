@@ -8,7 +8,6 @@ var cardFlex = document.querySelector('.card-view');
 
 //data
 var ideas = [];
-var targetStar;
 
 //eventListeners
 buttonSave.addEventListener('click', clickSave);
