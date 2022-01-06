@@ -8,6 +8,7 @@ var buttonDelete = document.querySelector('button-delete');
 
 //data
 var ideas = [];
+var targetStar;
 
 //eventListeners
 buttonSave.addEventListener('click', clickSave);
@@ -15,6 +16,7 @@ buttonSave.addEventListener('mouseover', validateError)
 buttonSave.addEventListener('mouseover', validateInputsAdd);
 buttonSave.addEventListener('mouseout', validateInputsRemove);
 cardFlex.addEventListener('click', toDelete);
+cardFlex.addEventListener('click', toStar);
 
 //functions
 function validateInputsAdd() {
@@ -45,17 +47,57 @@ function clickSave(e) {
     var inputIdea = new Idea(inputTitle.value, inputBody.value);
     ideas.push(inputIdea);
     inputTitle.value = '';
-    inputBody.value= ''; 
-    updateCardView(); 
+    inputBody.value= '';
+    updateCardView();
+  }
+}
+
+
+function validateError() {
+  if(inputTitle.value && inputBody.value) {
+    hide(errorMessage);
+  }
+}
+
+function toDelete(e) {
+  if (e.target.id === 'button-delete') {
+    var targetID = e.target.parentNode.parentNode.id;
+    for (var i = 0; i < ideas.length; i++) {
+      if(targetID === ideas[i].id.toString()) {
+        ideas.splice(i, 1);
+        updateCardView();
+        break;
+      }
+    }
+  }
+}
+
+function toStar(e) {
+  if (e.target.id === 'button-star') {
+    var targetID = e.target.parentNode.parentNode.id;
+    for (var i = 0; i < ideas.length; i++) {
+      if(targetID === ideas[i].id.toString()) {
+        ideas[i].isStarred = !ideas[i].isStarred;
+        targetStar = e.target.parentNode.id;
+        updateCardView();
+      }
+    }
   }
 }
 
 function updateCardView() {
+  //need to access isStarred
+  // need double-parentNode and need to add the isStarred
+  //attribute to html
+  //
+  if (targetStar) {
+    console.log('nick')
+  }
   var emptyHTML = '';
   for (var i= 0; i < ideas.length; i++) {
     emptyHTML += `<article class='card' id=${ideas[i].id}>
-    <div class='card-top-bar'>
-      <input type='image' src='assets/star-active.svg' id='button-star' />
+    <div class='card-top-bar' id=${ideas[i].isStarred}>
+      <input type='image' src='assets/star.svg' id='button-star' />
       <input type='image' src='assets/delete.svg' id='button-delete'/>
     </div>
     <section class='card-text'>
@@ -67,24 +109,6 @@ function updateCardView() {
       <button id='button-comment'>Comment</button>
     </div>
   </article>`;
-  } 
+  }
   cardFlex.innerHTML = emptyHTML;
-}
-
-function validateError() {
-  if(inputTitle.value && inputBody.value) {
-    hide(errorMessage);
-  }
-}
-
-function toDelete(e) {
-  var targetID = e.target.parentNode.parentNode.id;
-  for (var i = 0; i < ideas.length; i++) {
-    if(targetID === ideas[i].id.toString()) {
-        ideas.splice(i, 1);
-        updateCardView();
-        break;
-    }
-  }
-  updateCardView();
 }
