@@ -8,6 +8,10 @@ body {
 
 }
 
+textarea {  
+   font-family: 'Open Sans', sans-serif; 
+}
+
 .hidden {
   visibility: hidden;
 }
