@@ -1,15 +1,13 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-body {
+body,
+textarea {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-
-}
-
-textarea {  
-   font-family: 'Open Sans', sans-serif; 
 }
 
 .hidden {
@@ -26,21 +24,17 @@ textarea {
   position: fixed;
 }
 
-.main-title {
-  margin-left: 10px;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  font-weight: bold;
-}
-
 .nav-buttons {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 20px 0 30px 10px;
   border: 2px solid #353567;
-  padding-left: 10px;
   border-left: transparent;
   border-right: transparent;
+}
+
+.main-title {
+  margin-left: 10px;
+  padding: 15px 0 15px 15px;
+  font-weight: 800;
 }
 
 .header-filter {
@@ -52,15 +46,14 @@ textarea {
 
 .button-show-starred-ideas {
   margin-left: 10px;
+  width: 250px;
   background-color: #5356a4;
-  font-size: 1.35rem;
-  font-weight: bolder;
+  font-size: 1.33rem;
+  font-weight: 800;
   color: #d3d3e9;
-  border: 1px #353567;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border: 1px solid#353567;
+  padding: 10px 25px;
+  cursor: pointer;
 }
 
 .main-view {
@@ -69,6 +62,7 @@ textarea {
   margin-left: 300px;
 }
 
+/* Start of Form View */
 .form-view {
   background-color: #a9aad2;
   display: flex;
@@ -83,30 +77,25 @@ textarea {
   padding-bottom: 3px;
   font-size: 0.85rem;
 }
+
 .form-title {
   padding-top: 30px;
 }
 
-#input-title,
-#input-body {
+.input-title,
+.input-body {
   width: 350px;
 }
 
-#input-title,
-#input-search {
-  height: 35px;
-}
-
-#input-search {
-  width: 350px;
-  color: #1f1e3d;
+.input-title,
+.input-search {
   height: 40px;
-  padding-left: 8px;
 }
+
 .button-save {
   width: 350px;
   height: 45px;
-  background-color: #1f1e3d;
+  background-color: #2b2866;
   color: #e9e9f3;
   font-size: 1.15rem;
   font-weight: 500;
@@ -114,14 +103,14 @@ textarea {
 }
 
 .button-save-invalid {
- background-color: #6a66c6;
- cursor:not-allowed;
+  background-color: #6a66c6;
+  cursor: not-allowed;
 }
 
-#button-search {
+.button-search {
   width: 40px;
   height: 40px;
-  background-color: #1f1e3d;
+  background-color: #2b2866;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   padding: 0px 9px 0px 9px;
@@ -132,21 +121,24 @@ textarea {
   width: 350px;
   margin-top: 20px;
 }
-#input-title,
-#input-body,
-#input-search,
+.input-title,
+.input-body,
+.input-search,
 .button-save {
   border-radius: 3px;
   border: 1px solid #353567;
 }
 
-#input-body {
+.input-body {
   vertical-align: top;
   height: 80px;
   resize: none;
 }
 
-#input-search {
+.input-search {
+  width: 350px;
+  color: #1f1e3d;
+  padding-left: 8px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -168,7 +160,7 @@ textarea {
   justify-content: space-between;
 }
 .card-text {
-  height: 250px;
+  height: 245px;
   border: 2px solid #1f1f3d;
   border-bottom: transparent;
   padding: 5px;
@@ -182,8 +174,13 @@ textarea {
 
 .card-body {
   background-color: #ffffff;
-  height: 185px;
+  height: 80%;
+  width: 100%;
   overflow: scroll;
+}
+
+.card-body::-webkit-scrollbar {
+  display: none;
 }
 
 .card-bottom-bar {
@@ -192,7 +189,8 @@ textarea {
   display: flex;
   background-color: #5356a4;
 }
-#button-comment {
+
+.button-comment {
   color: #ffffff;
   font-size: 15px;
   display: flex;
@@ -203,5 +201,13 @@ textarea {
 
 .error-message {
   color: red;
+  font-size: 0.9rem;
+  font-weight: 800;
+  border: 1px solid #353567;
+  width: 350px;
+  padding: 3px 0 3px 0;
+  background-color: #ffffff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
 }
-

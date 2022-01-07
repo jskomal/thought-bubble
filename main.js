@@ -1,12 +1,12 @@
 //querySelectors
-var inputTitle = document.querySelector('#input-title');
-var inputBody = document.querySelector('#input-body');
-var inputSearchIdea = document.querySelector('#input-search');
-var buttonSave = document.querySelector('.button-save');
-var buttonDelete = document.querySelector('button-delete');
-var buttonShowStarred = document.querySelector('.button-show-starred-ideas');
-var errorMessage = document.querySelector('.error-message');
-var cardFlex = document.querySelector('.card-view');
+var inputTitle = document.querySelector('#inputTitle');
+var inputBody = document.querySelector('#inputBody');
+var inputSearchIdea = document.querySelector('#inputSearch');
+var buttonSave = document.querySelector('#buttonSave');
+var buttonDelete = document.querySelector('#buttonDelete');
+var buttonShowStarred = document.querySelector('#buttonShowStarredIdeas');
+var errorMessage = document.querySelector('#errorMessage');
+var cardFlex = document.querySelector('#cardView');
 
 //data
 var ideas = [];
@@ -62,7 +62,7 @@ function validateError() {
 }
 
 function toDelete(e) {
-  if (e.target.id === 'button-delete') {
+  if (e.target.id === 'buttonDelete') {
     var targetID = e.target.parentNode.parentNode.id;
     for (var i = 0; i < ideas.length; i++) {
       if (targetID === ideas[i].id.toString()) {
@@ -75,7 +75,7 @@ function toDelete(e) {
 }
 
 function toStar(e) {
-  if (e.target.id === 'button-star') {
+  if (e.target.id === 'buttonStar') {
     var targetID = e.target.parentNode.parentNode.id;
     for (var i = 0; i < ideas.length; i++) {
       if (targetID === ideas[i].id.toString()) {
@@ -90,7 +90,7 @@ function filterStarred(e) {
   e.preventDefault();
   if (buttonShowStarred.innerText === 'Show All Ideas') {
     console.log('hi');
-    updateCardView();
+    updateView(ideas);
     buttonShowStarred.innerText = 'Show Starred Ideas';
   } else {
     var starredIdeas = ideas.map(function checkForStarred(element) {
@@ -125,19 +125,19 @@ function updateView(arrayName) {
   var emptyHTML = '';
   for (var i = 0; i < arrayName.length; i++) {
     emptyHTML += `<article class='card' id=${arrayName[i].id}>
-      <div class='card-top-bar' id=${arrayName[i].isStarred}>
+      <div class='card-top-bar'>
         <input type='image' src= ${
           arrayName[i].isStarred ? 'assets/star-active.svg' : 'assets/star.svg'
-        } id='button-star' />
-        <input type='image' src='assets/delete.svg' id='button-delete'/>
+        } id='buttonStar' />
+        <input type='image' src='assets/delete.svg' id='buttonDelete'/>
       </div>
       <section class='card-text'>
         <h1 class='card-title'>${arrayName[i].title}</h1>
         <p class='card-body'>${arrayName[i].body}</p>
       </section>
       <div class='card-bottom-bar'>
-        <input type='image' src='assets/comment.svg' id='button-image-comment' />
-        <button id='button-comment'>Comment</button>
+        <input type='image' src='assets/comment.svg' id='buttonImageComment' />
+        <button class='button-comment'>Comment</button>
       </div>
     </article>`;
   }

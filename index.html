@@ -18,7 +18,7 @@
     <h1 class='main-title'>ThoughtBubble</h1>
     <section class='nav-buttons'>
       <h3 class='header-filter'>Filter Starred Ideas</h3>
-      <button class='button-show-starred-ideas'>Show Starred Ideas</button>
+      <button id='buttonShowStarredIdeas' class='button-show-starred-ideas'>Show Starred Ideas</button>
     </section>
   </nav>
 
@@ -26,31 +26,31 @@
   <main class='main-view'>
     <form class='form-view'>
       <h3 class='form-title'>Title</h3>
-      <input type='text' id='input-title'>
+      <input type='text' class='input-title' id='inputTitle'>
       <h3 class='form-body'>Body</h3>
-      <textarea type='text' id='input-body'></textarea>
-      <p class="error-message hidden">Saving requires both a Title and a Body</p>
-      <button class='button-save'>Save</button>
+      <textarea type='text' class='input-body' id='inputBody'></textarea>
+      <p id='errorMessage' class="error-message hidden">You must provide both Title and Body to Save</p>
+      <button id='buttonSave' class='button-save'>Save</button>
       <div class='search'>
-        <img src='assets/search.svg' id='button-search' />
-        <input type='text' placeholder='Search ideas' id='input-search'/>
+        <img src='assets/search.svg' class='button-search' id='buttonSearch' />
+        <input type='text' placeholder='Search ideas' class='input-search' id='inputSearch'/>
       </div>
-    </form>
+    </form> 
 
     <!-- CARD VIEW -->
-    <section class='card-view'>
+    <section id='cardView' class='card-view'>
       <article class='card hidden'>
         <div class='card-top-bar'>
-          <input type='image' src='assets/star.svg' id='button-star' />
-          <input type='image' src='assets/delete.svg' id='button-delete'/>
+          <input type='image' src='assets/star.svg' id='buttonStar' />
+          <input type='image' src='assets/delete.svg' id='buttonDelete'/>
         </div>
         <section class='card-text'>
           <h1 class='card-title'>Idea title</h1>
           <p class='card-body'>Idea body</p>
         </section>
         <div class='card-bottom-bar'>
-          <input type='image' src='assets/comment.svg' id='button-image-comment' />
-          <button id='button-comment'>Comment</button>
+          <input type='image' src='assets/comment.svg' id='buttonImageComment' />
+          <button class='button-comment'>Comment</button>
         </div>
       </article>
     </section>
