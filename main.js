@@ -89,11 +89,10 @@ function toStar(e) {
 function filterStarred(e) {
   e.preventDefault();
   if (buttonShowStarred.innerText === 'Show All Ideas') {
-    console.log('hi');
     updateView(ideas);
     buttonShowStarred.innerText = 'Show Starred Ideas';
   } else {
-    var starredIdeas = ideas.map(function checkForStarred(element) {
+    var starredIdeas = ideas.map(function (element) {
       if (element.isStarred) {
         return element;
       }
