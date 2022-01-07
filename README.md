@@ -38,6 +38,16 @@ You can access the site [here](https://jskomal.github.io/thought-bubble/).
 ---
 ## Project Gallery
 
+### Page on Load
+
+![Screen Shot 2022-01-07 at 16 07 53](https://user-images.githubusercontent.com/63659270/148618987-e1c2e091-28be-4f04-b04b-86f0d593bebe.png)
+
+### Page After Adding Ideas and Favoriting
+
+![Screen Shot 2022-01-07 at 16 06 44](https://user-images.githubusercontent.com/63659270/148619006-0b35d864-5f7e-49c0-8874-f8b9d561374c.png)
+
+
+---
 ## Possible Future Extensions
 
 - Sort Ideas so that the most recent is displayed in the upper left-hand position
