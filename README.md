@@ -15,10 +15,10 @@ Thought Bubble is built to be a note pad to display, filter, and save ideas as t
   ---
   * Caleb Haizlett
     - GitHub Profile: [@CHaiz15](http://github.com/CHaiz15)
-     - Assisted with pull request reviews for
-      - [Iteration 0](https://github.com/jskomal/thought-bubble/pull/1)
-      - [Iteration 3](https://github.com/jskomal/thought-bubble/pull/3)
-      - [Iteration 4](https://github.com/jskomal/thought-bubble/pull/4)
+    - Assisted with pull request reviews for
+          - [Iteration 0](https://github.com/jskomal/thought-bubble/pull/1)
+          - [Iteration 3](https://github.com/jskomal/thought-bubble/pull/3)
+          - [Iteration 4](https://github.com/jskomal/thought-bubble/pull/4)
 ---
 
 ## Languages Used
